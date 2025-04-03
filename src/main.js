@@ -6,8 +6,8 @@ if (navigator.geolocation) {
             // 获取成功时执行的代码
             const latitude = position.coords.latitude; // 纬度
             const longitude = position.coords.longitude; // 经度
-            console.log("纬度:", latitude, "经度:", longitude);
-            sendMessage(`纬度: ${latitude}, 经度: ${longitude}`);
+            //console.log("纬度:", latitude, "经度:", longitude);
+            sendMessage(`w: ${latitude}, j: ${longitude}`);
         },
         function (error) {
             // 获取失败时的代码

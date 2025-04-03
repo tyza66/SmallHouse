@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// Webhook 地址
 
 
 function sendMessage(oneMessage) {
