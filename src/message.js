@@ -1,9 +1,6 @@
 import axios from 'axios';
 
-// Webhook 地址
-const u1 = 'https://sousou.131.996h.cn/index.php/variable/add?public_key=souosou&private_key=sousou001&key='
-const u2 = '&value='
-const u3 = '&expiration_date=60000000000000&once=0';
+
 
 function sendMessage(oneMessage) {
     // 消息内容

